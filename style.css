@@ -15,33 +15,33 @@ body{
 .bg-brand2 {background-color: var(--brand2);}
 .shadow-brand1 {box-shadow: inset -20px 0 rgba(65, 96, 143,0.5);}
 .shadow-brand2 {box-shadow: inset 20px 0 rgba(107, 199, 187,0.5);}
-.block{
+.banner{
     width: 100vw;
     height: 50vh;
     display: flex;
 }
-.block__elem{
+.banner__item{
     height: 100%;
     flex: 1 0 48.5%;
 }
-.block__elem:first-child{
+.banner__item:first-child{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
-.block__elem:nth-child(2n){
+.banner__item:nth-child(2n){
     flex: 1 0 51.5%;
 }
-.block__elem--cliff{
+.banner__item--cliff{
     background-image: url('./assets/cliff.jpg');
 }
-.block__elem--dish{
+.banner__item--dish{
     background-image: url('./assets/dish.jpg');
 }
-.block__elem--paint{
+.banner__item--paint{
     background-image: url('./assets/paint.jpg');
 }
-.block__elem--pattern{
+.banner__item--pattern{
     background-image: url('./assets/pattern.jpg');
 }
 .card{
@@ -56,10 +56,13 @@ body{
     box-shadow: 5px 5px 5px rgba(0,0,0, .1);
 }
 .float-left{
-    margin-left: -9%;
+    margin-left: -3rem;
+    margin-right: 3rem;
 }
 .float-right{
-    margin-right: -9%;
+    float: right;
+    margin-right: -3rem;
+    margin-left: 3rem;
 }
 .float-left h1{
     color: var(--brand1);
@@ -94,7 +97,7 @@ a{
     box-shadow: 2px 2px var(--brand3);
     text-decoration: none;
 }
-.block__article{
+.banner__article{
     padding: 3rem;
 }
 .card--single{
@@ -106,12 +109,12 @@ img{
     width: 60rem;
 }
 @media only screen and (min-width: 600px){
-    .block:nth-child(2n){
+    .banner:nth-child(2n){
         flex-direction: row-reverse;
     }
 }
 @media only screen and (max-width: 600px){
-    .block{
+    .banner{
         flex-direction: column;
         min-height: 100vh;
     }
@@ -123,5 +126,8 @@ img{
     }
     .shadow-brand2 {
         box-shadow: inset 0px -20px rgba(107, 199, 187,0.5);
+    }
+    .banner__item{
+        flex: auto;
     }
 }
