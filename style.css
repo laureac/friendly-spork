@@ -47,7 +47,7 @@ body{
 .card{
     height: auto;
     max-width: 500px;
-    background-color: white;
+    background-color: rgb(252, 252, 252);
     margin-top: 20px;
     padding: 1.4rem;
     display: flex;
@@ -98,15 +98,20 @@ a{
     text-decoration: none;
 }
 .banner__article{
-    padding: 3rem;
+    padding: .5rem;
 }
 .card--single{
     margin-left: -10%;
+    max-width: 25rem;
+    height: fit-content;
 }
-img{
+.card--single h1{
+    color: var(--brand1);
+}
+.card__img{
     object-fit: cover;
-    height: 35rem;
-    width: 60rem;
+    height: 100%;
+    width: 50rem;
 }
 @media only screen and (min-width: 600px){
     .banner:nth-child(2n){
@@ -130,4 +135,9 @@ img{
     .banner__item{
         flex: auto;
     }
+    .card__img{
+        width: 90%;
+        height: inherit;
+    }
+
 }
