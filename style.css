@@ -19,8 +19,11 @@ body{
     width: 100vw;
     height: 50vh;
     display: flex;
+    position:relative;
 }
 .block__elem{
+    background-position: left;
+    background-size: cover;
     height: 100%;
     flex: 1 0 48.5%;
 }
@@ -55,12 +58,7 @@ body{
     justify-content: space-between;
     box-shadow: 5px 5px 5px rgba(0,0,0, .1);
 }
-.float-left{
-    margin-left: -9%;
-}
-.float-right{
-    margin-right: -9%;
-}
+
 .float-left h1{
     color: var(--brand1);
 }
@@ -108,6 +106,16 @@ img{
 @media only screen and (min-width: 600px){
     .block:nth-child(2n){
         flex-direction: row-reverse;
+    }
+    .float-left{
+        position: absolute;
+        left: 22%;
+        top: 30px;
+    }
+    .float-right{
+        position: absolute;
+        right: 22%;
+        top: 30px;
     }
 }
 @media only screen and (max-width: 600px){
